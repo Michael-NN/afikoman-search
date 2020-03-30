@@ -1,7 +1,8 @@
-<head>
-  Afikomen
-</head>
-<body>
-  <hr/>
-  Fire, water, earth, air
-</body>
+<html>
+  <head>
+    Afikomen
+  </head>
+  <body>
+    Fire, water, earth, air
+  </body>
+</html>
