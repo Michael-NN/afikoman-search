@@ -1,6 +1,12 @@
 <html>
-  <img src="MatzahHunt-R.jpg">
+  <img src="MatzahHunt-R.jpg" usemap="#afikomen">
+  <map name="afikomen">
+    <area shape="rect" coords="0,0,500,500" onclick="afiFound()">
+  </map>
 </html>
 <script>
   console.log("I am here");
+  function afiFound() {
+    console.log("Yes, I am!");
+  }
 </script>
