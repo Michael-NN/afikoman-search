@@ -1,12 +1,20 @@
 <html>
-  <img src="MatzahHunt-R.jpg" usemap="#afikomen">
-  <map name="afikomen">
-    <area shape="rect" coords="60.8%,65.8%,61.9%,70.5%" onclick="afiFound()">
-  </map>
+  <div class="image">
+    <img src="MatzahHunt-R.jpg" alt="Afikomen Room">
+    <div onclick="afiFound()" style="top: 10%; left: 10%; width: 15%; height: 15%;"></div>
+  </div>
 </html>
 <script>
-  console.log("I am here");
   function afiFound() {
     console.log("Yes, I am!");
   }
 </script>
+<style>
+  .image{
+    position: relative;
+  }
+  .image a{
+    display: block;      
+    position: absolute;
+  }
+</style>
