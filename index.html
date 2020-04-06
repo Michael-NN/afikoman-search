@@ -10,15 +10,30 @@
     <div onclick="afiFound()" style="top: 65.8%; left: 60.8%; right: 38%; bottom: 29.4%;"></div>
   </div>
 </html>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
 <script>
   let startTime = new Date();
   function afiFound() {
     let clickTime = new Date();
     let elapsed = (clickTime-startTime)/1000;
-    let display = document.getElementById("timeDisplay").innerText = "You found the afikomen in " + elapsed + "seconds!";
-    
+    let display = document.getElementById("timeDisplay").innerText = "You found the afikomen in " + elapsed + " seconds!";
+    let emailBody = "<html><h2>Afikomen Result</h2><strong>" + elapsed + "</strong></html>";
+    Email.send({
+        Host : "smtp.mailtrap.io",
+        Username : "mjnovet@gmail.com",
+        Password : "zcbmPURQ",
+       To : 'mjnovet@gmail.com',
+        From : "sender@example.com",
+        Subject : "Test email",
+        Body : emailBody
+    }).then(
+      message => alert(message)
+    );
   }
 </script>
+
 <style>
   .image{
     position: relative;
