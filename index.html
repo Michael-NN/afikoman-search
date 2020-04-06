@@ -31,19 +31,18 @@
     let person = document.getElementById("name").value;
     let foundMessage = person + " found the afikomen in " + elapsed + " seconds!"
     let display = document.getElementById("timeDisplay").innerText = foundMessage;
-/*    
-    let emailBody = "<html><h2>Afikomen Result</h2><strong>" + elapsed + "</strong></html>";
+    let emailBody = "<html><h2>Afikomen Result</h2><strong>" + foundMessage + "</strong></html>";
     Email.send({
         Host : "smtp.mailtrap.io",
-        Username : "MichaelJN",
-        Password : "zcbmPURQ",
+        Username : "21ce5cc46d20b5",
+        Password : "e69e8cfd3cac35",
        To : 'mjnovet@gmail.com',
         From : "sender@example.com",
-        Subject : "Test email",
+        Subject : "Afikomen Result",
         Body : emailBody
     }).then(
       message => alert(message)
-    );*/
+    );
   }
 </script>
 
