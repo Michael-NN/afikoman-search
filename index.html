@@ -5,7 +5,7 @@
   <div>
     Enter name here: 
     <input type="text" id="name"></input>
-    <button>Start</button>
+    <button onclick="handleStart()">Start</button>
   </div>
   <div id="timeDisplay">
     
@@ -20,6 +20,9 @@
 
 <script>
   let startTime = new Date();
+  function handleStart() {
+    alert("Button clicked!");
+  }
   function afiFound() {
     let clickTime = new Date();
     let elapsed = (clickTime-startTime)/1000;
