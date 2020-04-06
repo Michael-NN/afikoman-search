@@ -10,7 +10,7 @@
   <div id="timeDisplay">
     
   </div>
-  <div class="image">
+  <div class="image" id="image">
     <img src="MatzahHunt-R.jpg" alt="Afikomen Room">
     <div onclick="afiFound()" style="top: 65.8%; left: 60.8%; right: 38%; bottom: 29.4%;"></div>
   </div>
@@ -19,9 +19,11 @@
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 <script>
-  let startTime = new Date();
+  let startTime;
   function handleStart() {
-    alert("Button clicked!");
+    startTime = new Date();
+    let room = document.getElementById("image");
+    room.style.display = "block";
   }
   function afiFound() {
     let clickTime = new Date();
@@ -47,6 +49,7 @@
 
 <style>
   .image{
+    display: none;
     position: relative;
     height: 1276px;
     width: 1710px;
