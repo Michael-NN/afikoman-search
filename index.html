@@ -23,7 +23,10 @@
   function afiFound() {
     let clickTime = new Date();
     let elapsed = (clickTime-startTime)/1000;
-    let display = document.getElementById("timeDisplay").innerText = "You found the afikomen in " + elapsed + " seconds!";
+    let person = document.getElementById("name").value;
+    let foundMessage = person + " found the afikomen in " + elapsed + " seconds!"
+    let display = document.getElementById("timeDisplay").innerText = foundMessage;
+/*    
     let emailBody = "<html><h2>Afikomen Result</h2><strong>" + elapsed + "</strong></html>";
     Email.send({
         Host : "smtp.mailtrap.io",
@@ -35,7 +38,7 @@
         Body : emailBody
     }).then(
       message => alert(message)
-    );
+    );*/
   }
 </script>
 
